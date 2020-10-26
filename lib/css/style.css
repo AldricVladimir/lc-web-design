@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Sequel-Sans-Light-Body';
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+.container{
+  width:100%;
+  overflow:hidden;
+  margin:0;
+}
+
+
+/* Header **/
+header #banner{
+    background-image: url("../../resources/img/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Sequel-Sans-Light-Body';
+	letter-spacing: 3px;
+	margin-bottom:0;
+}
+
+header #banner img{
+    float: left;
+    width: 15%;
+    height: 15%;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    margin-right: 2.5%;
+}
+
+header #banner h1{
+    margin-top: 25px;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+header li{
+	padding-left: 20px;
+	display: inline-block;
+	letter-spacing: 1px;
+}
+
+i{
+	padding-right:2px;
+}
+
+.links{
+	font-family: Arial;
+	font-size: 18px;
+	color: white;
+}
+
+header li :hover {
+	background-color: #e1a100;
+	color: white;
+}
+
+.card{
+  margin-top: 10px;
+}
+
+.col-lg, .carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@font-face{
+    font-family: Sequel-Sans-Light-Body;
+    src: url('../../resources/fonts/Sequel\ Sans\ Light\ Body.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: Sequel-Sans-Medium-Body;
+    src: url('../../resources/fonts/Sequel\ Sans\ Medium\ Body.ttf') format('truetype');
+}
+
+.sequel-sans-medium{
+    font-family: 'Sequel-Sans-Medium-Body';
+}

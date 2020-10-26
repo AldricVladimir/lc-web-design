@@ -1,0 +1,53 @@
+<header>
+	<nav class = "navbar fixed-top navbar-text navbar-dark" style="background-color: #B80800; box-shadow: 2px 2px 2px 1px grey;">
+		<div class="container-fluid">
+			<div class = "navbar-header" style = "text-align: left; color: white; font-family: Sequel-Sans-Medium-Body; font-size: 12px;">Emergency Hotline: </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li id = "clockbox" style = "color: white; font-family: Sequel-Sans-Medium-Body; font-size: 12px;"></li>
+			</ul>
+			<script type="text/javascript">
+				var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+				var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+				function GetClock()
+				{
+					var d=new Date();
+					var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+					var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+					
+					if(nhour==0){ap=" AM";nhour=12;}
+					else if(nhour<12){ap=" AM";}
+					else if(nhour==12){ap=" PM";}
+					else if(nhour>12){ap=" PM";nhour-=12;}
+
+					if(nmin<=9) nmin="0"+nmin;
+					if(nsec<=9) nsec="0"+nsec;
+
+					var clocktext = ""+tday[nday]+" | "+tmonth[nmonth]+" "+ndate+", "+nyear+" - "+nhour+":"+nmin+":"+nsec+ap+"";
+					document.getElementById('clockbox').innerHTML=clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock,1000);
+			</script>
+		</div>
+	</nav>
+	<div class="jumbotron" id="banner">
+            <div class="container">
+                <a href="index.html">
+                    <img src="./resources/img/LIPA LOGO.png" class="img-fluid"/>
+                </a>
+                <p>The Official Website of the</p>
+                <p><span>City of Lipa</span></p>
+            </div>
+    </div>
+	<nav class="navbar navbar-dark justify-content-center" style="background-color: #FFCF40; box-shadow: 5px 5px 5px 2px grey;">
+		<ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link links" href="index.html"><i class="fas fa-fw fa-home fa-lg"></i>HOME</a></li>
+            <li class="nav-item"><a class="nav-link links" href="news.html"><i class="fas fa-fw fa-newspaper fa-lg"></i>NEWS</a></li>
+            <li class="nav-item"><a class="nav-link links" href="event.html"><i class="far fa-fw fa-calendar-check fa-lg"></i>EVENT</a></li>
+            <li class="nav-item"><a class="nav-link links" href="ourGovt.html"><i class="fas fa-fw fa-landmark fa-lg"></i>OUR GOVERNMENT</a></li>
+            <li class="nav-item"><a class="nav-link links" href="services.html"><i class="fas fa-fw fa-hands-helping fa-lg"></i>SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link links" href="contact.html"><i class="fas fa-fw fa-mobile-alt fa-lg"></i>CONTACT</a></li>
+        </ul>
+	</nav>
+</header>
